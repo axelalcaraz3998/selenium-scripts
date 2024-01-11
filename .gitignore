@@ -1,4 +1,4 @@
 **/.env
-/venv_selenium
+venv_selenium
 .pytest_cache
 __pycache__
