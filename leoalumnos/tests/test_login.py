@@ -1,10 +1,10 @@
 import pytest
-from siiau.src.pages.LoginPage import LoginPage
-from siiau.config import CODE, NIP
+from leoalumnos.src.pages.LoginPage import LoginPage
+from leoalumnos.config import CODE, NIP
 
 @pytest.mark.usefixtures("init_driver")
 class TestLogin:
-  @pytest.mark.login
+  @pytest.mark.test_login
   def test_login(self):
     login_page = LoginPage(self.driver)
 

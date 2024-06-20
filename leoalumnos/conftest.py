@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.edge.options import Options as EdgeOptions
-import siiau.config as config
+import leoalumnos.config as config
 import pytest
 
 @pytest.fixture(scope="class")
@@ -17,10 +17,13 @@ def init_driver(request):
     
     if browser == "chrome":
       driver = webdriver.Chrome()
+      driver.maximize_window()
     elif browser == "firefox":
       driver = webdriver.Firefox()
+      driver.maximize_window()
     elif browser == "edge":
       driver = webdriver.Edge()
+      driver.maximize_window()
     elif browser == "headlesschrome":
       options = ChromeOptions()
       options.add_argument("--headless")
